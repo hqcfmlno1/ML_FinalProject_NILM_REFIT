@@ -79,7 +79,7 @@ jupyter notebook notebooks/data_merge.ipynb
 - Chia thành 5 phần: `House2_part1.csv` - `House2_part5.csv`
 
 ### Cấu trúc dữ liệu
-- Time: Thời gian đo (yyyy:mm:dd)
+- Time: Thời gian đo (yyyy:mm:dd hh:mm:ss)
 - Unix
 - Aggregate: Tổng công suất tiêu thụ (bao gồm cả công suất của các thiết bị không được theo dõi)
 - Appliance{i}: Công suất tiêu thụ của thiết bị i
