@@ -3,3 +3,7 @@ src/tools/__pycache__
 outputs/linear_regression_window_shift/plots/
 outputs/linear_regression_window_shift/predictions.csv
 checkpoints/basic models/linear_regression_window_shift/
+src/models/__pycache__/
+data/processed_data/House2_full_shifted.csv
+data/test
+data/train
