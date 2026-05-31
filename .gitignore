@@ -7,3 +7,4 @@ src/models/__pycache__/
 data/processed_data/House2_full_shifted.csv
 data/test
 data/train
+data/processed_data/House2_full_shifted.h5
