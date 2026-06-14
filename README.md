@@ -30,11 +30,27 @@ The project implements various models ranging from baseline machine learning alg
 
 ### 2. Advanced Deep Learning Models
 *   **Sequence-to-Point (S2P) / S2PwA (S2P with Attention)**: Takes a sequence of aggregate mains power (window length of 300) and predicts the power consumption of a target appliance at the midpoint of the window. The network consists of 1D CNN layers (local spatial feature extraction), BiLSTM (two-way sequential modeling), and a self-attention mechanism to focus on key activation regions.
+    
+    ![Sequence-to-Point Architecture](./s2p.png)
+
 *   **Hybrid S2PwA (Classifier + Regressor)**:
     *   *Classifier (S2qwaClassifier)*: Predicts the ON/OFF state of an appliance using a deep 1D CNN with Weighted Binary Cross-Entropy Loss to handle class imbalance.
     *   *Regressor (S2PwaRegressor)*: Focuses solely on estimating the active power consumption when the appliance is active, utilizing a Masked L1 Loss.
     *   *Final Output* = Regressor Power × Classifier State (ON/OFF).
+    
+    ![Hybrid S2PwA (2-Stage Gating) Architecture](./s2p%20hybrid%202%20stage%20gating.png)
+
 *   **AugLPN (Augmented Light-weight Feature Pyramid Network)**: The state-of-the-art deep learning model in this project. It features a Light-weight Feature Pyramid Network (**LFPN**) to construct multi-scale feature pyramids from aggregate mains data, combined with two parallel branches: a **Spatial Branch L** (extracts spatial features via Attention and Dilated Convolutions) and a **Temporal Branch R** (extracts temporal features via Depthwise Separable Convolutions and BiGRU). It is optimized using Weighted MAE Loss.
+    
+    ![AugLPN Architecture](./auglpn.png)
+    
+    *AugLPN model is based on the following paper:*
+    > **AugLPN-NILM: Augmented lightweight parallel network for NILM embedding attention module over sequence to point**  
+    > Wuqing Yu, Linfeng Yang, Xiangyu Liu  
+    > *Sustainable Energy, Grids and Networks*, Volume 38, 2024, 101378  
+    > ISSN: 2352-4677  
+    > DOI: [10.1016/j.segan.2024.101378](https://doi.org/10.1016/j.segan.2024.101378)  
+    > Article Link: [ScienceDirect](https://www.sciencedirect.com/science/article/pii/S2352467724001073)
 
 ---
 
