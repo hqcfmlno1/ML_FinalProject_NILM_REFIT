@@ -40,7 +40,7 @@ The project implements various models ranging from baseline machine learning alg
     
     ![Hybrid S2PwA (2-Stage Gating) Architecture](architectures/s2p%20hybrid%202%20stage%20gating.png)
 
-*   **AugLPN (Augmented Light-weight Feature Pyramid Network)**: The state-of-the-art deep learning model in this project. It features a Light-weight Feature Pyramid Network (**LFPN**) to construct multi-scale feature pyramids from aggregate mains data, combined with two parallel branches: a **Spatial Branch L** (extracts spatial features via Attention and Dilated Convolutions) and a **Temporal Branch R** (extracts temporal features via Depthwise Separable Convolutions and BiGRU). It is optimized using Weighted MAE Loss.
+*   **AugLPN (Augmented Light-weight Feature Pyramid Network)**: The model features a Light-weight Feature Pyramid Network (**LFPN**) to construct multi-scale feature pyramids from aggregate mains data, combined with two parallel branches: a **Spatial Branch L** (extracts spatial features via Attention and Dilated Convolutions) and a **Temporal Branch R** (extracts temporal features via Depthwise Separable Convolutions and BiGRU). It is optimized using Weighted MAE Loss.
     
     ![AugLPN Architecture](architectures/auglpn.png)
     
